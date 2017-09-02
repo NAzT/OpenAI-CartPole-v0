@@ -66,6 +66,19 @@ def generate_training_data():
 
     return training_data
 
+# Get features
+def get_features(training_data):
+    # Observation
+    X = np.array([i[0] for i in training_data]).reshape(-1,len(training_data[0][0]),1)
+    # Action
+    y = [i[1] for i in training_data]
+
+    return X, y
+
+# TODO: Neural network model
+# TODO: Render and test
 
 # Generate training data
-generate_training_data()
+training_data = generate_training_data()
+# Get features
+X, y = get_features(training_data)
