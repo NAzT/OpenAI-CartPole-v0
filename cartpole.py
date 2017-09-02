@@ -47,8 +47,10 @@ def generate_training_data():
             for data in episode_data:
                 # Convert to one-hot
                 if data[1] == 1:
+                    # Balanced - score: 1
                     output = [0, 1]
                 elif data[1] == 0:
+                    # Unbalanced - score: 0
                     output = [1, 0]
 
                 # Save training data
@@ -60,10 +62,10 @@ def generate_training_data():
     # Convert training_data to numpy array
     training_data_save = np.array(training_data)
     # Save training data
-    np.save('saved.npy', training_data_save)
+    np.save('trainingdata.npy', training_data_save)
 
     return training_data
 
 
 # Generate training data
-# generate_training_data()
+generate_training_data()
