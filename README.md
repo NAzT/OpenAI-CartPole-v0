@@ -1,2 +1,3 @@
-# OpenAI-FrozenLake-v0
-Solving OpenAI's FrozenLake environment using Q Learning
+# OpenAI-CartPole-v0
+
+Solving OpenAI's CartPole environment using reinforcement Learning
