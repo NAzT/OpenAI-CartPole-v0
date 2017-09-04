@@ -4,7 +4,7 @@ import numpy as np
 import tflearn
 from tflearn.layers.core import input_data, dropout, fully_connected
 from tflearn.layers.estimator import regression 
- 
+
 
 env = gym.make('CartPole-v0')
 env.reset()
@@ -61,15 +61,10 @@ def generate_training_data():
         # Reset env
         env.reset()
 
-    # Convert training_data to numpy array
-    training_data_save = np.array(training_data)
-    # Save training data
-    np.save('trainingdata.npy', training_data_save)
-
     return training_data
 
 
-# RNN model
+# Neural Network model
 def neural_network_model(input_size):
     network = input_data(shape=[None, input_size, 1], name='input')
     # Convolution
