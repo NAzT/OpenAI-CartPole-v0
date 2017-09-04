@@ -1,13 +1,10 @@
 import gym
-from gym import wrappers
 import random
 import numpy as np
 import tflearn
 from tflearn.layers.core import input_data, dropout, fully_connected
-from tflearn.layers.recurrent import BasicLSTMCell
-from tflearn.layers.estimator import regression
-from statistics import median, mean
-from collections import Counter
+from tflearn.layers.estimator import regression 
+ 
 
 env = gym.make('CartPole-v0')
 env.reset()
