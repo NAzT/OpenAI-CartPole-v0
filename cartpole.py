@@ -113,7 +113,6 @@ def render_and_test():
     model = train_model(training_data)
     scores = []
     actions_done = []
-    # Moniter gym
     for game in range(required_episodes):
         score = 0
         episode_data = []
